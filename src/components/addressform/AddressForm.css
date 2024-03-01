@@ -1,0 +1,54 @@
+.form-main {
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.address-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+    align-items: center;
+}
+
+input {
+    height: 30px;
+    width: 100%;
+    padding-left: 5px;
+}
+
+select {
+    height: 30px;
+    width: 100%;
+}
+
+label {
+    width: 100%;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+}
+
+.form-button {
+    height: 30px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.address-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.address-list-button {
+    height: 30px;
+    width: 200px;
+    cursor: pointer;
+}
