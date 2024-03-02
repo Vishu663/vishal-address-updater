@@ -243,7 +243,7 @@ const AddressForm = () => {
 						type="text"
 						name="streetAddress"
 						value={address.streetAddress}
-						placeholder="Enter your street address"
+						placeholder="Enter your Street Address"
 						onChange={handleChange}
 						required
 					/>
