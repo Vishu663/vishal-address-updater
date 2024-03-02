@@ -124,7 +124,7 @@ const AddressList = () => {
 			</ul>
 			<button
 				className="newadd-button"
-				onClick={() => navigate("/addressform")}
+				onClick={() => navigate("/")}
 			>
 				Add New Address
         <CiCirclePlus className="icons" />

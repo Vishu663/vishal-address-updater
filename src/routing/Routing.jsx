@@ -6,7 +6,7 @@ export default function Routing() {
 	return (
 		<Router>
 			<Routes>
-				<Route path="/addressform" element={<AddressForm />} />
+				<Route path="/" element={<AddressForm />} />
 				<Route path="/addresslist" element={<AddressList />} />
 			</Routes>
 		</Router>

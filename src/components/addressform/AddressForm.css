@@ -62,3 +62,9 @@ label {
 .toast {
     position: top-right;
 }
+
+@media (max-width: 450px) {
+    .address-form {
+        width: 80%;
+    }
+}

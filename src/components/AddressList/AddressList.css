@@ -56,3 +56,9 @@
     height: 25px;
     width: 25px;
 }
+
+@media (max-width: 450px) {
+    .list ul {
+        width: 80%;
+    }
+}
