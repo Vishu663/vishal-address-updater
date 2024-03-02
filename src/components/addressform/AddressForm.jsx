@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./AddressForm.css";
 import { useNavigate } from "react-router-dom";
+import { CiBoxList } from "react-icons/ci";
+import { Bounce, ToastContainer, toast } from "react-toastify";
 
 const states = [
 	"Andhra Pradesh",
@@ -207,19 +209,33 @@ const AddressForm = () => {
 				address
 			);
 			console.log("Address added:", response.data);
+			alert("Address Added!")
+			// Clear the form fields after successful submission
+			setAddress({
+				streetAddress: "",
+				city: "",
+				state: "",
+				zipCode: ""
+			});
 		} catch (error) {
 			console.error("Error adding address:", error);
 		}
 	};
+	
+	const handleAlert = () => {
+		alert("Form Submitted");
+	};
+	
 
 	const navigate = useNavigate();
 
 	const handleList = () => {
 		navigate("/addresslist");
-	}
+	};
 
 	return (
 		<div className="form-main">
+			<h1>Address Updater App</h1>
 			<form className="address-form" onSubmit={handleSubmit}>
 				<label>
 					Street Address
@@ -279,13 +295,15 @@ const AddressForm = () => {
 						required
 					/>
 				</label>
-				<button className="form-button" type="submit">
+				<button className="form-button" type="submit" >
 					Submit
 				</button>
 			</form>
-			<div className="address-list">
-				Check all the addresses here <button className="address-list-button" onClick={handleList}>
+			<div className="address-list-red">
+				Check all the addresses here{" "}
+				<button className="address-list-button" onClick={handleList}>
 					Address List
+					<CiBoxList className="icons" />
 				</button>
 			</div>
 		</div>
